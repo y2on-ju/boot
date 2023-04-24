@@ -62,7 +62,42 @@ public interface Mapper05 {
 			WHERE CustomerId = #{id}
 			""")
 	Customer sql5(Integer id);
+	
+	@Select("""
+			SELECT 
+				EmployeeId AS id,
+				LastName,
+				FirstName,
+				Notes,
+				Photo,
+				BirthDate birth
+			FROM Employees
+			WHERE EmployeeId = #{id}
+			""")
+	Employee sql6(Integer id);
+	
+	@Update("""
+			UPDATE Employees
+			SET 
+				LastName = #{lastName},
+				FirstName = #{firstName},
+				Photo = #{photo},
+				Notes = #{notes},
+				BirthDate = #{birth}
+			WHERE
+				EmployeeId = #{id}
+			""")
+	int sql7(Employee employee);
 }
+
+
+
+
+
+
+
+
+
 
 
 
