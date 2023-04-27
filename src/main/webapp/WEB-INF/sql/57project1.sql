@@ -13,3 +13,10 @@ inserted DATETIME DEFAULT NOW()
 );
 DESC Board;
 
+INSERT INTO Board (title, body, writer)
+VALUES ('샘플 제목', '샘플 본문', 'user00');
+
+SELECT *FROM Board ORDER BY id DESC;
+
+
+
