@@ -4,11 +4,9 @@ INSERT INTO Customers
 SELECT CustomerName, ContactName, Address, City, Country
 FROM Customers;
 
-
 SELECT COUNT(*) FROM Customers;
 
 DESC Customers;
-
 
 -- 1 페이지
 -- 페이지당 20개 레코드
