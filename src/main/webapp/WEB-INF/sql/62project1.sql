@@ -7,5 +7,12 @@ CREATE TABLE Member (
     email VARCHAR(100) UNIQUE,
     inserted DATETIME DEFAULT NOW()
 );
-
+DESC Member;
 SELECT * FROM Member;
+
+DESC FileName;
+
+SELECT * FROM FileName ORDER BY Boardid DESC;
+
+
+ALTER TABLE Member ADD COLUMN password VARCHAR(100) NOT NULL AFTER id;
