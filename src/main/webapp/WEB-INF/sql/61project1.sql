@@ -12,10 +12,10 @@ CREATE TABLE FileName (
 SELECT * FROM FileName;
 SELECT * FROM Board b JOIN FileName f 
 ON b.id = f.boardId
-WHERE b.id = 265; -- file 있는 게시물
+WHERE b.id = 4121; -- file 있는 게시물
 SELECT * FROM Board b LEFT JOIN FileName f 
 ON b.id = f.boardId
-WHERE b.id = 264; -- file 없는 게시물
+WHERE b.id = 4119; -- file 없는 게시물
 SELECT * FROM Board WHERE id = 4119;
 
 USE Board;
@@ -26,4 +26,9 @@ GROUP BY b.id
 ORDER BY b.id DESC
 LIMIT 0, 5;
 
+4124
+4122
+4121
+4120
+4119
 
