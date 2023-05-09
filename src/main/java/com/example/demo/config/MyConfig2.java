@@ -3,23 +3,24 @@ package com.example.demo.config;
 import java.util.*;
 
 import org.springframework.context.annotation.*;
+import org.springframework.security.config.annotation.method.configuration.*;
 import org.springframework.security.config.annotation.web.builders.*;
 import org.springframework.security.core.userdetails.*;
-import org.springframework.security.core.userdetails.User.*;
 import org.springframework.security.crypto.bcrypt.*;
 import org.springframework.security.crypto.password.*;
 import org.springframework.security.provisioning.*;
 import org.springframework.security.web.*;
 
 @Configuration
+@EnableMethodSecurity
 public class MyConfig2 {
-
+	
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http)
 			throws Exception {
 		http.formLogin()
 				.loginPage("/sub33/mylogin")
-				.defaultSuccessUrl("/list", true)
+				.defaultSuccessUrl("/sub33/loginSuccess", true)
 				.usernameParameter("id") // username
 				.passwordParameter("pw"); // password
 
